@@ -21,6 +21,7 @@ class CreateBooksTable extends Migration
             $table->string('isbn', 13);
             $table->date('published_date');
             $table->foreignId('publisher_id')->constrained('publishers');
+            $table->foreignId('author_id')->constrained('authors');
             $table->timestamps();
         });
     }
