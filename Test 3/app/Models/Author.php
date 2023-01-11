@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Author extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'name',
+        'birth_date',
+        'about'
+    ];
+
+    public $timestamps = false;
 }

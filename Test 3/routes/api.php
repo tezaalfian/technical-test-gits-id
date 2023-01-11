@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\AuthorController;
 use App\Http\Controllers\PublisherController;
 use Illuminate\Support\Facades\Route;
 
@@ -25,6 +26,7 @@ Route::group([
     Route::get('/profile', [AuthController::class, 'userProfile']);
 
     Route::apiResources([
-        'publishers' => PublisherController::class
+        'publishers' => PublisherController::class,
+        'authors' => AuthorController::class,
     ]);
 });
