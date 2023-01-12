@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AuthorController;
+use App\Http\Controllers\BookController;
 use App\Http\Controllers\PublisherController;
 use Illuminate\Support\Facades\Route;
 
@@ -34,5 +35,6 @@ Route::group([
     Route::apiResources([
         'publishers' => PublisherController::class,
         'authors' => AuthorController::class,
+        'books' => BookController::class
     ]);
 });
